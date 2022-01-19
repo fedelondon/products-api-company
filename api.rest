@@ -1,0 +1,15 @@
+#@name get products
+GET http://localhost:3000/api/products
+
+###
+
+# @name CreateProducts
+POST http://localhost:3000/api/products HTTP/1.1
+Content-Type: application/json
+
+{
+  "name":"HP Laptop",
+  "category":"laptop",
+  "price":20000,
+  "imgUrl":"laptop"
+}
