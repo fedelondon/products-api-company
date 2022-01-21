@@ -12,4 +12,19 @@ export const getProducts = async (req, res) => {
   res.json(products);
 };
 
-export const updateProduct = async (req, res) => {};
+export const updateProductById = async (req, res) => {
+  //  console.log(req.body, req.params["productId"]);
+  const updateProduct = await Product.findByIdAndUpdate(
+    req.params.productId,
+    req.body,
+    {
+      new: true,
+    }
+  );
+  res.status(200).json(updateProduct);
+};
+
+export const getProductById = async (req, res) => {
+  const product = await Product.findById(req.params.productId);
+  res.status(200).json(product);
+};

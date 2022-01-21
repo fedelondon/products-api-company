@@ -13,3 +13,18 @@ Content-Type: application/json
   "price":20000,
   "imgUrl":"laptop"
 }
+
+###
+
+# @name UpdateProduct
+PUT http://localhost:3000/api/products/61e755e8bf715a5259315aab
+Content-Type: application/json
+
+{
+  "price":25000
+}
+
+###
+
+# @name findById
+GET http://localhost:3000/api/products/61e755e8bf715a5259315aab
